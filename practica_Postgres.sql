@@ -1,5 +1,5 @@
 -- ==========================================================
--- 1. LIMPIEZA TOTAL (Para empezar desde cero y evitar errores)
+-- 1. LIMPIEZA TOTAL
 -- ==========================================================
 DROP TABLE IF EXISTS usuarios CASCADE;
 DROP TABLE IF EXISTS materias CASCADE;
@@ -24,6 +24,24 @@ CREATE TABLE materias (
     nombre VARCHAR(100) NOT NULL
 );
 
+-- ==========================================================
+-- 4. INSERTAR USUARIOS
+-- ==========================================================
+INSERT INTO usuarios (cedula, nombre, clave) VALUES 
+('1750000001', 'Juan Zambrano', 'admin2025'),
+('1750000002', 'Maria Perez', 'segura123'),
+('1750000003', 'Carlos Lopez', 'futbol10'),
+('1750000004', 'Ana Torres', 'gatos4life'),
+('1750000005', 'Luis Gomez', '123456'),
+('1750000006', 'Sofia Ramirez', 'password'),
+('1750000007', 'Diego Herrera', 'ecuador2025'),
+('1750000008', 'Valeria Castillo', 'valebendecida'),
+('1750000009', 'Jose Intriago', 'barcelonaSC'),
+('1750000010', 'Elena Velez', 'profe123');
+
+-- ==========================================================
+-- 5. INSERTAR MATERIAS
+-- ==========================================================
 INSERT INTO materias (codigo, nombre) VALUES 
 ('SIS-101', 'Fundamentos de Programación'),
 ('SIS-102', 'Bases de Datos I'),
@@ -35,7 +53,7 @@ INSERT INTO materias (codigo, nombre) VALUES
 ('SIS-400', 'Arquitectura de Software');
 
 -- ==========================================================
--- 5. VERIFICACIÓN FINAL
+-- 6. VERIFICACIÓN FINAL
 -- ==========================================================
-SELECT * FROM usuarios; 
+SELECT * FROM usuarios;
 SELECT * FROM materias;
